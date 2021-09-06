@@ -1,0 +1,55 @@
+.page-container {
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  gap: 30px;
+  animation-name: change-background;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.header-container {
+  font-size: 40px;
+  text-align: center;
+}
+
+.loader-container {
+  width: 100%;
+  height: 400px;
+  display: grid;
+  place-items: center;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+.loading-button {
+  align-self: center;
+  width: 200px;
+  height: 100px;
+}
+
+@keyframes change-background {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: goldenrod;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
